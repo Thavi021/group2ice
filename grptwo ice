@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+
+namespace ICETask2Grp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Console.WriteLine("Hello World!");
+
+            int[] nums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            string[] arNames = new string[] { "dfghjk", "sdfghj", "rtyuo", "cvbnm", "cvbnm" ,"cvbnm", "cvbnm" ,"cvbnm", "cvbnm", "cvbnm" };
+
+            string name = "Monday";
+            bubbleSort(arNames);
+
+            bubbleSort(nums);
+
+            
+
+        }
+
+
+
+        private static void bubbleSort<T>(T[] ar)
+        {
+            for (int i = 0; i < ar.Length - 1; i++)
+            {
+                for (int j = (i + 1); j < ar.Length; j++)
+                {
+
+                    if (Comparer<T>.Default.Compare(ar[i], ar[j]) == 1)
+                    {
+                        T temp = ar[i];
+                        ar[i] = ar[j];
+                        ar[j] = temp;
+                    }
+
+                    //if(ar[i] > ar[j])
+                    //{
+                    //    int temp = ar[i];
+                    //    ar[i] = ar[j];
+                    //    ar[j] = temp;
+                    //}
+
+                }
+            }
+
+            //displaying from an array
+            foreach (T n in ar)
+            {
+                Console.WriteLine(n);
+            }
+        }
+    }
+}
+
+
+
+
+    //class ExtraClass1
+    //{
+    //    public static void dfghjk()
+    //    {
+
+//    }
+//}
+
